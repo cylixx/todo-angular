@@ -1,0 +1,4 @@
+/* Default class for validations */
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}

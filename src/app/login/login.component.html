@@ -1,0 +1,19 @@
+<h1>Login!</h1>
+
+<div class="container">
+    <!-- Angular diretive: If -->
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+
+    <div>
+        <!-- Angular directive:  Definimos Data Binding [(ngModel)] para ligarlo con el component property, en este caso 'username' -->
+        User Name : <input type="text" name="username" [(ngModel)]="username" >
+        <br>Password  : <input type="password" name="password" [(ngModel)]="password">
+
+        <!-- interpolation data binding -->
+        <!-- <br>User Name: {{username}} -->
+
+        <!-- <br><button (click)=handleLogin() class="btn btn-success">Login</button> -->
+        <!-- <br><button (click)=handleBasicAuthLogin() class="btn btn-success">Login</button> -->
+        <br><button (click)=handleJWTAuthLogin() class="btn btn-success">Login</button>
+    </div>
+</div>
